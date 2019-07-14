@@ -1,12 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>webpack starterkit</title>
-</head>
-<body>
-  <h1>webpack starter</h1>
-  <p>✨ A lightweight foundation for your next webpack based frontend project.</p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Mini App</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 1em;
+        background-color:#fff;
+      }
+      .mdc-typography--headline4{
+
+      }
+      [data-bill],.material-icons{
+        display:inline-block;
+
+        vertical-align:middle;
+      }
+      .material-icons{
+        font-size:150px;
+      }
+      [data-credit-card]{
+        width:435px;
+        min-height:240px;
+        border-radius:10px;
+        background-color:#5d6874;
+      }
+      [data-card-type] {
+        display:block;
+        width:120px;
+        height:60px;
+
+      }
+      [data-cc-digits]{
+        margin-top:2em;
+      }
+      [data-cc-digits] input{
+        color:#fff;
+        font-size:2em;
+        border:none;
+        line-height:2em;
+        background:none;
+        margin-right:0.5em;
+      }
+      [data-cc-info]{
+        margin-top:1em;
+      }
+      [data-cc-info] input{
+        color:#fff;
+        font-size:1.2em;
+        background:none;
+        border:none;
+      }
+      [data-cc-info] input:last-child{
+        padding-right:10px;
+        float:right;
+      }
+      [data-pay-btn]{
+        position:fixed;
+        width:90%;
+        border:1px solid;
+        bottom:20px;
+      }
+
+
+      [data-cart-info],
+      [data-credit-card] {
+        transform: scale(0.78);
+    	margin-left: -3.4em;
+      }
+
+      [data-cc-info] input:focus,
+      [data-cc-digits] input:focus {
+        outline: none;
+      }
+
+      .mdc-card__primary-action,
+      .mdc-card__primary-action:hover {
+        cursor: auto;
+        padding: 20px;
+        min-height: inherit;
+      }
+
+      [data-credit-card] [data-card-type] {
+        transition: width 1.5s;
+        margin-left: calc(100% - 130px);
+      }
+
+      [data-credit-card].is-visa {
+         background: linear-gradient(135deg, #622774 0%, #c53364 100%);
+       }
+
+       [data-credit-card].is-mastercard {
+         background: linear-gradient(135deg, #65799b 0%, #5e2563 100%);
+       }
+
+      .is-visa [data-card-type],
+      .is-mastercard [data-card-type] {
+        width: auto;
+      }
+
+      input.is-invalid,
+      .is-invalid input {
+        text-decoration: line-through;
+      }
+
+      ::placeholder {
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div data-cart-info>
+      <h4 class='mdc-typography--headline4'><span class='material-icons'>
+        shopping_cart
+
+        </span>
+        <span data-bill>
+
+
+        </span>
+
+      </h4>
+
+    </div>
+    <div data-credit-card class='mdc-card mdc-card-outline'>
+      <div class='mdc-card__primary-action'>
+        <img data-card-type src='http://placehold.it/120x60.png?text=Card'>
+        <div data-cc-digits>
+          <input type="text" placeholder='----' size='4' value="4050">
+          <input type='text' placeholder='----' size='4'>
+          <input type='text' placeholder='----' size='4'>
+          <input type='text' placeholder='----' size='4'>
+        </div>
+      </div>
+
+
+    <div data-cc-info>
+      <input type='text' value="col mma" placeholder='Name Surname' size='20'>
+      <input type='text' placeholder='MM/YY' value="02/20" size='6'>
+
+    </div>
+    </div>
+
+      <button data-pay-btn class='mdc-button'>Pay & Checkout Now</button>
+
+
+    <script>
+
+
+
+    </script>
+  </body>
 </html>
