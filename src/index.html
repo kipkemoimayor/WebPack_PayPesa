@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Mini App</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.5/css/mdb.min.css" rel="stylesheet">
     <style>
       body {
         margin: 0;
@@ -25,10 +29,11 @@
         font-size:150px;
       }
       [data-credit-card]{
-        width:435px;
+
         min-height:240px;
         border-radius:10px;
         background-color:#5d6874;
+        width:auto;
       }
       [data-card-type] {
         display:block;
@@ -60,11 +65,15 @@
         padding-right:10px;
         float:right;
       }
-      [data-pay-btn]{
+      /* [data-pay-btn]{
         position:fixed;
         width:90%;
         border:1px solid;
         bottom:20px;
+      } */
+      [data-pay-btn]{
+        width: 95%;
+        margin: 10px;
       }
 
 
@@ -112,43 +121,62 @@
       ::placeholder {
         color: #fff;
       }
+      [outline]{
+        border: 1px solid rgba(0,0,0,0.1);
+        margin: 30px;
+      }
     </style>
   </head>
   <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3"> </div>
+        <div class="col-md-6">
+          <div outline class="">
+            <div data-cart-info>
+              <h4 class='animated fadeIn'><span class='material-icons'>
+                <i class="fas fa-shopping-cart"></i>
 
-    <div data-cart-info>
-      <h4 class='mdc-typography--headline4'><span class='material-icons'>
-        shopping_cart
 
-        </span>
-        <span data-bill>
+              </span><br>
+                price: <span data-bill>
 
 
-        </span>
+                </span>
 
-      </h4>
+              </h4>
 
-    </div>
-    <div data-credit-card class='mdc-card mdc-card-outline'>
-      <div class='mdc-card__primary-action'>
-        <img data-card-type src='http://placehold.it/120x60.png?text=Card'>
-        <div data-cc-digits>
-          <input type="text" placeholder='----' size='4' value="4050">
-          <input type='text' placeholder='----' size='4'>
-          <input type='text' placeholder='----' size='4'>
-          <input type='text' placeholder='----' size='4'>
-        </div>
+            </div>
+            <div data-credit-card class='mdb-card mdb-card-outline'>
+              <div class='mdc-card__primary-action'>
+                <img data-card-type src='http://placehold.it/120x60.png?text=Card'>
+                <div data-cc-digits>
+                  <input type="text" placeholder='----' size='4' >
+                  <input type='text' placeholder='----' size='4'>
+                  <input type='text' placeholder='----' size='4'>
+                  <input type='text' placeholder='----' size='4'>
+                </div>
+              </div>
+
+
+            <div data-cc-info>
+              <input type='text'  placeholder='Name Surname' size='20'>
+              <input type='text' placeholder='MM/YY' size='6'>
+
+            </div>
+
+            </div>
+  <button data-pay-btn class='btn btn-outline-info btn-sm'>Pay & Checkout Now</button>
+
+          </div>
+
+         </div>
+        <div class="col-md-3"> </div>
+
       </div>
 
-
-    <div data-cc-info>
-      <input type='text' value="col mma" placeholder='Name Surname' size='20'>
-      <input type='text' placeholder='MM/YY' value="02/20" size='6'>
-
-    </div>
     </div>
 
-      <button data-pay-btn class='mdc-button'>Pay & Checkout Now</button>
 
 
     <script>
