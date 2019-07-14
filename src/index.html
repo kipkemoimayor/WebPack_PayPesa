@@ -122,8 +122,15 @@
         color: #fff;
       }
       [outline]{
-        border: 1px solid rgba(0,0,0,0.1);
+        border: 5px solid rgba(0,0,0,0.9);
         margin: 30px;
+        border-radius: 20px;
+      }
+      #meme{
+        font-size: 50px;
+      }
+      [size]{
+        margin: 10px;
       }
     </style>
   </head>
@@ -133,40 +140,42 @@
         <div class="col-md-3"> </div>
         <div class="col-md-6">
           <div outline class="">
-            <div data-cart-info>
-              <h4 class='animated fadeIn'><span class='material-icons'>
-                <i class="fas fa-shopping-cart"></i>
+            <div size class="">
+              <div data-cart-info>
+                <h4  class='animated fadeIn'><span class='material-icons'>
+                  <i class="fas fa-shopping-cart"></i>
+                    <span id="meme">PayPesa</span>
+                </span><br>
+                  price: <span data-bill>
 
 
-              </span><br>
-                price: <span data-bill>
+                  </span>
 
+                </h4>
 
-                </span>
-
-              </h4>
-
-            </div>
-            <div data-credit-card class='mdb-card mdb-card-outline'>
-              <div class='mdc-card__primary-action'>
-                <img data-card-type src='http://placehold.it/120x60.png?text=Card'>
-                <div data-cc-digits>
-                  <input type="text" placeholder='----' size='4' >
-                  <input type='text' placeholder='----' size='4'>
-                  <input type='text' placeholder='----' size='4'>
-                  <input type='text' placeholder='----' size='4'>
+              </div>
+              <div data-credit-card class='mdb-card mdb-card-outline'>
+                <div class='mdc-card__primary-action'>
+                  <img data-card-type src='http://placehold.it/120x60.png?text=Card'>
+                  <div data-cc-digits>
+                    <input type="text" placeholder='----' size='4' >
+                    <input type='text' placeholder='----' size='4'>
+                    <input type='text' placeholder='----' size='4'>
+                    <input type='text' placeholder='----' size='4'>
+                  </div>
                 </div>
+
+
+              <div data-cc-info>
+                <input type='text'  placeholder='Name Surname' size='20'>
+                <input type='text' placeholder='MM/YY' size='6'>
+
               </div>
 
-
-            <div data-cc-info>
-              <input type='text'  placeholder='Name Surname' size='20'>
-              <input type='text' placeholder='MM/YY' size='6'>
-
+              </div>
+    <button data-pay-btn class='btn btn-outline-dark btn-sm'>Pay & Checkout Now</button>
             </div>
 
-            </div>
-  <button data-pay-btn class='btn btn-outline-info btn-sm'>Pay & Checkout Now</button>
 
           </div>
 

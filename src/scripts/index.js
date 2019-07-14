@@ -91,7 +91,8 @@
      };
 
      const expiryDateFormatIsValid=(target)=>{
-       let newDate=target.split("/");
+       let targetDate=target.value
+       let newDate=targetDate.split("/");
        let intDate=parseInt(newDate[0]);
        if((intDate<=12 && intDate>0) && newDate[1].length==2){
          return true;
@@ -105,7 +106,7 @@
        if (number.startsWith("4")){
          document.querySelector("[data-credit-card]").classList.add('is-visa')
          document.querySelector('[data-credit-card]').classList.remove('is-mastercard');
-         // document.querySelector('[data-card-type]').src=supportedCards.visa;
+         document.querySelector('[data-card-type]').src="https://banner2.kisspng.com/20180705/auy/kisspng-visa-debit-card-credit-card-logo-mastercard-supermercado-5b3daa406f9d67.4063706315307679364572.jpg";
 
          return 'is-visa';
        }
@@ -113,7 +114,7 @@
          let masterClass=document.querySelector('[data-credit-card]');
          masterClass.classList.add("is-mastercard")
          masterClass.classList.remove('is-visa');
-         // document.querySelector('[data-card-type]').src=supportedCards.mastercard;
+         document.querySelector('[data-card-type]').src="https://banner2.kisspng.com/20171220/xbq/mastercard-logo-png-5a3a1f0bb3c385.51580525151375847573633352.jpg"
 
          return 'is-mastercard';
        }
@@ -138,8 +139,9 @@
 
      };
      const validateCardHolderName=({target})=>{
+        let targetName=target.value
        let targetClass=document.querySelector('[data-cc-info] >input');
-       let name=target.split(" ");
+       let name=targetName.split(" ");
        if (name.length==2 && name[0].length>2 && name[1].length>2){
          flagIfInvalid(targetClass,true);
          return true;
